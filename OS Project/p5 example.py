@@ -9,7 +9,7 @@ def box_with_lines_data(x,y,width,height,max_rows,data):
     for i in range(0,max_rows):
          line((x,y+space_btw_array*j),(x+width,y+space_btw_array*j))
          fill(0)
-         text(data[i],(x+2,y+(space_btw_array*j)-8))
+         text(data[i],(x+2,y+(space_btw_array*j)-9))
          no_fill()
          j+=1
 def rand_hex(x,y):
@@ -20,7 +20,7 @@ def setup():
     virtual_addr,PDPT,PD,index_PT,offset=rand_hex(0,2**32),rand_hex(0,3),rand_hex(0,2**9),rand_hex(0,2**9),rand_hex(0,2**12)
     print(virtual_addr,'    ',PDPT,'    ',PD,'    ',index_PT,'    ',offset)
     print(type(PD))
-    data=[str(bin(random.randrange(0,3,1))) for i in range(0,4)]
+    data=[str(bin(random.randrange(0,20,1))) for i in range(0,4)]
     data_sec=[str(bin(random.randrange(0,20,3))) for i in range(0,20)]
     
         
@@ -29,7 +29,7 @@ def draw():
    
     #create random  value
     virtual_addr,PDPT,PD,index_PT,offset=rand_hex(0,2**32),rand_hex(0,3),rand_hex(0,2**9),rand_hex(0,2**9),rand_hex(0,2**12)
-    data=[str(bin(random.randrange(0,3,1))) for i in range(0,4)]
+    data=[str(bin(random.randrange(0,20,1))) for i in range(0,4)]
     data_sec=[str(bin(random.randrange(0,20,3))) for i in range(0,20)]
     
     #shapes
